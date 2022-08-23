@@ -26,12 +26,15 @@ public class Main {
 
         System.out.println(map);
 
+        int maxValue = max(map);
+        int minValue = min(map);
+
         for (char key : map.keySet()) {
-            if (map.get(key) == max(map)) {
-                System.out.println("Чаще всего встречалась буква " + key + " - " + map.get(key) + " раза");
+            if (map.get(key) == maxValue) {
+                System.out.println("Чаще всего встречалась буква " + key + " - " + maxValue + " раза");
             }
-            if (map.get(key) == min(map)) {
-                System.out.println("Реже всего встречалась буква " + key + " - " + map.get(key) + " раз");
+            if (map.get(key) == minValue) {
+                System.out.println("Реже всего встречалась буква " + key + " - " + minValue + " раз");
             }
         }
     }
